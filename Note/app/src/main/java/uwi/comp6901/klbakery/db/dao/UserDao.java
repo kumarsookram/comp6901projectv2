@@ -23,12 +23,16 @@ public interface UserDao {
     @Delete
     void delete(User user);
 
+    @Query("Select * from user where user_email like :email and user_password like :password")
+    LiveData<User> validate( String email, String password);
+
     @Query("Select * from user where id = :userId")
     LiveData<User> loadUser(int userId);
 
     @Query("Select * from user")
     LiveData<List<User>> allUser();
 
-    @Query("Select * from user where user_email like :email")
+
+    @Query("Select * from user where user_email like :email limit 1")
     LiveData<User> loadUser(String email);
 }

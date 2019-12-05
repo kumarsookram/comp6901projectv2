@@ -22,11 +22,13 @@ public class DeliveryRun {
     private int user_id;
     private int route_id;
     private Date delivery_date;
+    private String status;
 
-    public DeliveryRun(int user_id, int route_id, Date delivery_date) {
+    public DeliveryRun(int user_id, int route_id, Date delivery_date, String status) {
         this.user_id = user_id;
         this.route_id = route_id;
         this.delivery_date = delivery_date;
+        this.status = status;
     }
 
     public int getId() {
@@ -44,6 +46,8 @@ public class DeliveryRun {
     public Date getDelivery_date() {
         return delivery_date;
     }
+
+    public String getStatus() { return status;}
 
     public void setId(int id) {
         this.id = id;

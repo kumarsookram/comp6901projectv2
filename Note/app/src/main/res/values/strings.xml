@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">KL Bakery</string>
+    <string name="customer_type">Customer</string>
+    <string name="driver_type">Driver</string>
+    <string name="store_rep_type">Store Rep</string>
+
+    <string-array name="driver_status">
+        <item>Pending</item>
+        <item>Completed</item>
+        <item>Cancelled</item>
+    </string-array>
+
 </resources>
+
+

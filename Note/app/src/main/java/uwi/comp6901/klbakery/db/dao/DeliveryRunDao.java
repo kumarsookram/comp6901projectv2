@@ -32,8 +32,8 @@ public interface DeliveryRunDao {
     @Query("Select * from delivery_run where delivery_date = :date")
     LiveData<List<DeliveryRun>> dailyDeliveryRun(Date date);
 
-    @Query("Select * from delivery_run where user_id = :driverId and delivery_date = :date")
-    LiveData<List<DeliveryRun>> driverDailyRun(int driverId, Date date);
+    @Query("Select * from delivery_run where user_id = :driverId and status = :status")
+    LiveData<List<DeliveryRun>> driverPendingRun(int driverId, String status);
 
 
 

@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import java.util.List;
+
 import uwi.comp6901.klbakery.db.entity.User;
 import uwi.comp6901.klbakery.repository.UserRepository;
 
@@ -39,11 +41,9 @@ public class UserViewModel extends AndroidViewModel {
         return userRepository.getUser(email);
     }
 
-    public boolean validate(User user, String password){
-        if (user.getUser_password().equals(password)) {
-            return true;
-        }else {
-            return false;
-        }
+    public LiveData<User>validate(String email, String password){
+        return userRepository.validate(email, password);
     }
+
+    public LiveData<List<User>> getAllUsers(){ return userRepository.getAllUser();}
 }

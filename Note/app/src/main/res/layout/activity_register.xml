@@ -61,6 +61,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/et_user_reg_password_2"
         app:layout_constraintVertical_bias="0.251" />
+
     <EditText
         android:id="@+id/et_user_reg_address"
         android:layout_width="0dp"
@@ -73,7 +74,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/et_user_reg_name"
-        app:layout_constraintVertical_bias="0.251" />
+        app:layout_constraintVertical_bias="0.373" />
 
     <Button
         android:id="@+id/btn_register"
@@ -84,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_user_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_user_reg_address"
         app:layout_constraintVertical_bias="0.206" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

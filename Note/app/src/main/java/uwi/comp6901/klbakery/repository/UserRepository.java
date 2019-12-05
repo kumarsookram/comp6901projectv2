@@ -3,6 +3,7 @@ package uwi.comp6901.klbakery.repository;
 import android.app.Application;
 import android.os.AsyncTask;
 
+import androidx.core.widget.ListViewAutoScrollHelper;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
@@ -46,6 +47,9 @@ public class UserRepository {
     public LiveData<User> getUser(String email){
         return userDao.loadUser(email);
     }
+
+    public LiveData<User> validate(String email, String password){ return userDao.validate(email, password);}
+
 
     private static class InsertUserAsyncTask extends AsyncTask<User, Void, Void> {
         private UserDao userDao;

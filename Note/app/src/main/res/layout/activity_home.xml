@@ -7,6 +7,19 @@
     tools:context="uwi.comp6901.klbakery.ui.HomeActivity">
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_user"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+        app:layout_constraintVertical_bias="0.038"
+        tools:listitem="@layout/user_item" />
+
     <TextView
         android:id="@+id/welcome_text"
         android:layout_width="0dp"
@@ -20,6 +33,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.099" />
+
+
+    <EditText
+        android:id="@+id/text_view_home_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:hint="User Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_home_password"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view_user"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/text_view_home_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_home_email"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="296dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_home_register"

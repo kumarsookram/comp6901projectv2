@@ -40,6 +40,18 @@ public class InvoiceRepository {
         new DeleteInvoiceAsyncTask(invoiceDao).execute(inoice);
     }
 
+    public void createInvoices(){
+
+    }
+
+    public void createInvoiceDetails(){
+
+    }
+
+    public void updateOrdersToInvoiced(){
+
+    }
+
     public static class InsertInvoiceAsyncTask extends AsyncTask<Invoice, Void, Void>{
         private InvoiceDao invoiceDao;
 

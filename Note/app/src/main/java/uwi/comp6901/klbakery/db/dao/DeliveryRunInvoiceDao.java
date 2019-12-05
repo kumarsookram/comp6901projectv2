@@ -11,6 +11,7 @@ import androidx.room.Update;
 import java.util.List;
 
 import uwi.comp6901.klbakery.db.entity.DeliveryRunInvoice;
+import uwi.comp6901.klbakery.db.entity.DeliveryRunInvoiceData;
 
 @Dao
 public interface DeliveryRunInvoiceDao {
@@ -27,4 +28,6 @@ public interface DeliveryRunInvoiceDao {
     @Query("Select * from delivery_run_invoice where delivery_run_id = :deliverRunId")
     LiveData<List<DeliveryRunInvoice>> allDeliveryRunInvoice(int deliverRunId);
 
+    /*@Query("select * from delivery_run_invoice join invoice on (de)")
+    LiveData<List<DeliveryRunInvoiceData>> allDeliveryRunInvoiceData(int deliveryRunId);*/
 }
