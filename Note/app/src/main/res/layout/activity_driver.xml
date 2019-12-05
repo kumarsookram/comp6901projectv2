@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.drivers.DriverActivity">
+
+    <TextView
+        android:id="@+id/tv_da_driver_id_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="Driver ID" />
+    <TextView
+        android:id="@+id/tv_da_driver_id"
+        android:layout_width="150dp"
+        android:layout_marginLeft="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Driver ID" />
+    <TextView
+        android:id="@+id/tv_da_driver_status_label"
+        android:layout_width="150dp"
+        android:layout_marginLeft="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Status" />
+    <EditText
+        android:id="@+id/tv_da_status"
+        android:layout_width="150dp"
+        android:layout_marginLeft="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Pending" />
+
+
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_driver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        tools:listitem="@layout/driver_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_da_view_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_details"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="32dp"
+        />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
