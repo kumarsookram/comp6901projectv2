@@ -1,0 +1,113 @@
+@startuml
+'hide the spot
+hide circle
+' avoid problems with angled crows feet
+
+skinparam linetype ortho
+
+entity "User" as u {
+*user_ID: number<<generated>>
+--
+user_name : text
+user_type : number <<FK>>
+user_email : text
+user_password : text
+address : text
+}
+
+entity "User_Type" as u_t {
+*user_type : number<<generated>>
+--
+type : text
+
+}
+
+entity "User_Route" as u_r {
+*user_id : number<<FK>>
+*route_id : number<<FK>>
+--
+date_assigned : date
+}
+
+entity "Route" as r {
+*route_id : number<<generated>>
+--
+route_name : text
+route_region : text
+}
+
+entity "Product" as p {
+*product_id : number <<generated>>
+--
+product_name : text
+product_price : number
+product_capacity : number
+}
+
+entity "Order" as c_o {
+*order_id : number <<generated>>
+--
+customer_id : number<<FK>>
+order_date : date
+delivery_date : date
+order_status : text
+}
+
+entity "Order_details" as o_d{
+*line_id : number <<generated>>
+--
+order_id : number <<FK>>
+product_id : number <<FK>>
+quantity : number
+}
+
+entity "Invoice" as i {
+*invoice_id : number <<generated>>
+--
+invoice_date : date
+order_id : number<<FK>>
+delivery_date : date
+invoice_status : text
+comment : text
+}
+
+entity "Invoice_details" as i_d {
+*line_id : number <<generated>>
+--
+invoice_id : number<<FK>>
+product_name : text
+product_price : number
+quantity : number
+}
+
+entity "Delivery_run" as d_r {
+ *delivery_run_id : number <<generated>>
+ --
+ driver_id : number <<FK>>
+ delivery_date : date
+ route_id : number <<FK>>
+}
+
+entity "Delivery_run_invoices" as d_r_i{
+ *delivery_run_id : number <<FK>>
+ *invoice_id : number <<FK>>
+ --
+ date_generated : date
+}
+
+u ||..o{ u_t
+u ||..o{ u_r
+r ||..o{ u_r
+u ||..o{ c_o
+c_o ||..o{ o_d
+p ||..o{ o_d
+i ||..|| c_o
+i ||..o{ i_d
+d_r }o..|| u
+d_r }o..|| r
+d_r ||..o{ d_r_i
+i ||..o{ d_r_i
+
+@enduml
+
+
