@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+android:paddingBottom="16dp"
+android:paddingLeft="16dp"
+android:paddingRight="16dp"
+android:paddingTop="16dp"
+    tools:context="uwi.comp6901.klbakery.ui.ProfileActivity">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Profile"
+    android:id="@+id/tvProfile"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:textColor="#000000" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Name:"
+    android:id="@+id/tvName"
+    android:layout_below="@+id/tvProfile"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="42dp"
+    android:textSize="20sp"
+    android:textColor="#000000" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Address:"
+    android:id="@+id/tvAddress"
+    android:layout_below="@+id/tvName"
+    android:layout_alignParentStart="true"
+    android:textSize="20sp"
+    android:textColor="#000000" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Telephone:"
+    android:id="@+id/tvPhoneInfo"
+    android:layout_below="@+id/tvAddress"
+    android:layout_alignParentStart="true"
+    android:textSize="20sp"
+    android:textColor="#000000" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Email:"
+    android:id="@+id/tvEmail"
+    android:textSize="20sp"
+    android:layout_below="@+id/tvPhoneInfo"
+    android:layout_alignParentStart="true"
+    android:textColor="#000000" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Payment Info"
+    android:id="@+id/tvPayment"
+    android:textSize="20sp"
+    android:textColor="#000000"
+    android:layout_below="@+id/tvEmail"
+    android:layout_alignParentStart="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pending Orders"
+    android:id="@+id/tvOrders"
+    android:textSize="20sp"
+    android:textColor="#000000"
+    android:layout_below="@+id/btnShop"
+    android:layout_alignParentStart="true" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Go Shop"
+    android:id="@+id/btnShop"
+    android:textSize="20dp"
+    android:layout_below="@+id/btnlogout"
+    android:layout_alignParentStart="true"
+    android:layout_alignEnd="@+id/btnlogout" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Confirm Order and Logout"
+    android:id="@+id/btnlogout"
+    android:textSize="20dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentStart="true" />
+</RelativeLayout>
