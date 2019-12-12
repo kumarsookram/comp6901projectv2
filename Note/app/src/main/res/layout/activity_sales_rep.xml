@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent" android:background="@color/colorPrimary"
+android:paddingBottom="16dp"
+android:paddingLeft="16dp"
+android:paddingRight="16dp"
+android:paddingTop="16dp"
+    tools:context="uwi.comp6901.klbakery.ui.SalesRepActivity">
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/logoImage"
+    android:src="@drawable/bakery_logo_small"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/txtWelcome"
+    android:id="@+id/txtWelcome"
+    android:textSize="35sp"
+    android:textStyle="bold"
+    android:layout_below="@+id/logoImage"
+    android:layout_centerHorizontal="true"
+    android:textColor="#000000" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/txtMemberLogin"
+    android:id="@+id/txtMember"
+    android:textSize="25sp"
+    android:layout_below="@+id/txtWelcome"
+    android:layout_toEndOf="@+id/txtUser"
+    android:layout_marginTop="30dp"
+    android:textStyle="bold"
+    android:textColor="#000000"
+    android:layout_marginBottom="10dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/username"
+    android:id="@+id/txtUser"
+    android:textSize="20sp"
+    android:textStyle="italic"
+    android:textColor="#000000"
+    android:layout_below="@+id/txtMember"
+    android:layout_alignStart="@+id/txtPasswordMsg" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/password"
+    android:id="@+id/txtPasswordMsg"
+    android:textSize="20sp"
+    android:textStyle="italic"
+    android:textColor="#000000"
+    android:layout_below="@+id/txtUsername"
+    android:layout_toStartOf="@+id/txtWelcome"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="-5dp" />
+
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="textPassword"
+    android:ems="10"
+    android:id="@+id/txtPassword"
+    android:layout_alignTop="@+id/txtPasswordMsg"
+    android:layout_alignEnd="@+id/txtUsername"
+    android:layout_toEndOf="@+id/txtPasswordMsg"
+    android:textColor="#000000" />
+
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/txtUsername"
+    android:layout_alignTop="@+id/txtUser"
+    android:layout_alignParentEnd="true"
+    android:layout_alignStart="@+id/btnJoin" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/btnSignIn"
+    android:id="@+id/btnLogin"
+    android:textSize="25sp"
+    android:layout_below="@+id/txtPassword"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="15dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/txtNotAMember"
+    android:id="@+id/textView"
+    android:textSize="25sp"
+    android:textColor="#000000"
+    android:layout_below="@+id/btnLogin"
+    android:layout_alignStart="@+id/txtPassword" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Join Now!"
+    android:id="@+id/btnJoin"
+    android:textSize="25sp"
+    android:layout_below="@+id/textView"
+    android:layout_alignRight="@+id/txtWelcome" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:id="@+id/txtError"
+    android:textColor="#ff0000"
+    android:layout_below="@+id/txtPassword"
+    android:layout_centerHorizontal="true" />
+</RelativeLayout>
